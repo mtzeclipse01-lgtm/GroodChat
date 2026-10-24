@@ -27,6 +27,11 @@ emergency-grade.
   It shows the count of requests still waiting, so it clears when you accept or
   decline rather than when you glance at it.
 
+## v0.6.6 — 2026-10-24
+
+- Reissued the GroodChat desktop release with the Desktop client workflow
+  available on the default branch to generate the Windows installer.
+
 ## v0.6.5 — 2026-10-24
 
 - First public GroodChat desktop release, based on the Outpost codebase.

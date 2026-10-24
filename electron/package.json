@@ -1,7 +1,7 @@
 {
   "name": "groodchat-desktop",
   "desktopName": "groodchat.desktop",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "private": true,
   "description": "Open-source chat client customized from Outpost.",
   "main": "main.js",
