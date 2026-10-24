@@ -38,6 +38,10 @@ jobs:
         working-directory: electron
         run: npm ci
 
+      - name: Render GroodChat app icon
+        working-directory: electron
+        run: npx --yes sharp-cli -i build/groodchat.svg -o build/icon.png resize 1024 1024
+
       # Inert until MACOS_CERT_P12_BASE64 exists, same pattern as the Android
       # keystore and the Apple signing steps in ios.yml. Writes the Developer
       # ID Application certificate to a file electron-builder picks up through

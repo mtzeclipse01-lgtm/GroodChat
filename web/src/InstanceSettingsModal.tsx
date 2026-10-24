@@ -773,7 +773,7 @@ export function InstanceSettingsModal({
       {tab === "auditLog" && canModerate && <AuditLogTab baseUrl={baseUrl} token={token} />}
       {tab === "import" && isOwner && <ImportPanel baseUrl={baseUrl} token={token} />}
 
-      <p className="instance-version">Outpost v{instanceInfo.version}</p>
+      <p className="instance-version">GroodChat v{instanceInfo.version}</p>
       {tab !== "general" && (
         <div className="modal-actions">
           <button className="btn secondary" onClick={onClose}>

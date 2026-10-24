@@ -1,7 +1,7 @@
 import { Theme } from "./api";
 
 export const THEMES: { value: Theme; label: string; blurb: string; swatch: string }[] = [
-  { value: "business", label: "Signal Fire", blurb: "Warm ember on deep slate", swatch: "#ff8a52" },
+  { value: "business", label: "GroodChat", blurb: "Red on near-black", swatch: "#e12636" },
   { value: "cyberpunk", label: "Cyberpunk", blurb: "Neon magenta on near-black", swatch: "#ff2079" },
   { value: "hacker", label: "Hacker", blurb: "Matrix green terminal", swatch: "#00ff41" },
   { value: "esports", label: "Esports", blurb: "High-energy orange/black", swatch: "#ff6b00" },

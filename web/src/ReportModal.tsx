@@ -69,7 +69,7 @@ export function ReportModal({
     <Modal onClose={onClose}>
       <h3>Report {messageId ? "message" : "member"}</h3>
       <p className="invite-meta">
-        This goes to this server's moderators, not to Outpost. {targetUsername} isn't told who reported them.
+        This goes to this server's moderators, not to GroodChat. {targetUsername} isn't told who reported them.
       </p>
       <form onSubmit={submit}>
         <label>

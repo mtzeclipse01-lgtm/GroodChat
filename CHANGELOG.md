@@ -27,6 +27,12 @@ emergency-grade.
   It shows the count of requests still waiting, so it clears when you accept or
   decline rather than when you glance at it.
 
+## v0.6.5 — 2026-10-24
+
+- First public GroodChat desktop release, based on the Outpost codebase.
+- Added GroodChat branding, a red-and-black default theme, and app icons.
+- Added Windows NSIS installer generation through GitHub Actions.
+
 ## v0.6.4 — 2026-08-18
 
 - **The iPhone app has its real icon.** Every build until now shipped the default placeholder the project scaffolding came with, a blue cross on a grid, so that is what testers have had on their home screen since the first TestFlight upload.

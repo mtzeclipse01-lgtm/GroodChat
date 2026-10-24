@@ -1163,7 +1163,7 @@ function VoiceTab() {
           </label>
           {settings.vadAuto ? (
             <p className="settings-hint">
-              Outpost listens to your room's background noise and moves the threshold to sit just above it,
+              GroodChat listens to your room's background noise and moves the threshold to sit just above it,
               adjusting as things change. The marker below shows where it currently sits — talk normally and
               watch it settle. Turn this off if you'd rather set it by hand.
             </p>

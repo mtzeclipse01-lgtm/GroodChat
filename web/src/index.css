@@ -7,29 +7,29 @@
      dropdown list unreadable even after giving the select itself a dark
      background. */
   color-scheme: dark;
-  --bg-rail: #1a140f;
-  --bg-sidebar: #211a16;
-  --bg-primary: #291f19;
-  --bg-secondary: #211a16;
-  --bg-modifier-hover: rgba(255, 138, 82, 0.1);
-  --bg-input: #1a140f;
-  --bg-floating: #14100c;
-  --brand: #ff8a52;
-  --brand-hover: #c65d3b;
+  --bg-rail: #100c0d;
+  --bg-sidebar: #171112;
+  --bg-primary: #211719;
+  --bg-secondary: #171112;
+  --bg-modifier-hover: rgba(225, 38, 54, 0.12);
+  --bg-input: #100c0d;
+  --bg-floating: #0c090a;
+  --brand: #e12636;
+  --brand-hover: #ba1f2d;
   --green: #5fa85e;
   --red: #e6483f;
-  --header-primary: #f7ecd9;
-  --text-normal: #e8dbc8;
-  --text-muted: #ab9884;
-  --text-faint: #7d6c5b;
-  --interactive-hover: #362920;
-  --interactive-active: #43332a;
-  --border-subtle: rgba(242, 230, 216, 0.07);
+  --header-primary: #fff1f2;
+  --text-normal: #eadcde;
+  --text-muted: #aa9699;
+  --text-faint: #78696c;
+  --interactive-hover: #302124;
+  --interactive-active: #40292d;
+  --border-subtle: rgba(255, 225, 228, 0.08);
 }
 
 /* ---------- Themes ---------- */
-/* "business" is the default palette above (Signal Fire — warm ember on
-   deep slate, Outpost's actual brand). The other three override the same
+/* "business" is the default palette above (GroodChat red on near-black).
+  The other themes override the same
    variable set via [data-theme], applied to <html> by the client based on
    the active instance's InstanceSettings.theme. */
 
@@ -97,9 +97,8 @@
   --border-subtle: rgba(255, 107, 0, 0.2);
 }
 
-/* The first light theme. Grounds are warm rather than blue-grey so it still
-   reads as Outpost, and the ember darkens because #ff8a52 does not hold
-   contrast on a light background.
+/* The first light theme. Grounds are warm rather than blue-grey, and the
+  brand red darkens for contrast on a light background.
 
    color-scheme matters here: :root sets `dark`, and a theme that overrides
    only colours inherits it -- which leaves native scrollbars, dropdowns and

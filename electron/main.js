@@ -50,7 +50,7 @@ function createWindow() {
     height: 860,
     minWidth: 820,
     minHeight: 560,
-    backgroundColor: "#1a140f",
+    backgroundColor: "#100c0d",
     icon: path.join(__dirname, "build", "icon.png"),
     webPreferences: {
       contextIsolation: true,
@@ -66,9 +66,9 @@ function createWindow() {
 function showAbout() {
   dialog.showMessageBox(mainWindow, {
     type: "info",
-    title: "About Outpost",
-    message: "Outpost",
-    detail: `Version ${app.getVersion()}\n\nSelf-hosted Discord alternative.\nhttps://github.com/blindrun/outpost-chat`,
+    title: "About GroodChat",
+    message: "GroodChat",
+    detail: `Version ${app.getVersion()}\n\nBased on the open-source Outpost project.\nhttps://github.com/blindrun/outpost-chat`,
     buttons: ["OK"],
   });
 }
@@ -78,7 +78,7 @@ function promptRestartToUpdate() {
     .showMessageBox(mainWindow, {
       type: "info",
       title: "Update Ready",
-      message: "A new version of Outpost has been downloaded.",
+      message: "A new version of GroodChat has been downloaded.",
       detail: "Restart now to apply it, or keep working — it'll apply automatically next time you quit.",
       buttons: ["Restart Now", "Later"],
       defaultId: 0,
@@ -122,7 +122,7 @@ function checkForUpdatesManually() {
     dialog.showMessageBox(mainWindow, {
       type: "info",
       title: "Up to Date",
-      message: `Outpost ${app.getVersion()} is the latest version.`,
+      message: `GroodChat ${app.getVersion()} is the latest version.`,
     });
   };
   const onError = (err) => {
@@ -148,9 +148,9 @@ function checkForUpdatesManually() {
 function buildMenu() {
   const isMac = process.platform === "darwin";
   const appMenu = {
-    label: "Outpost",
+    label: "GroodChat",
     submenu: [
-      { label: "About Outpost", click: showAbout },
+      { label: "About GroodChat", click: showAbout },
       { label: "Check for Updates…", click: checkForUpdatesManually },
       { type: "separator" },
       ...(isMac ? [{ role: "hide" }, { role: "hideOthers" }, { role: "unhide" }, { type: "separator" }] : []),

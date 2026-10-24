@@ -1,8 +1,8 @@
-# Outpost
+# GroodChat
 
-**[outpost-chat.com](https://outpost-chat.com)** — project site, server directory, downloads, changelog.
+GroodChat is a community customization of [Outpost](https://github.com/blindrun/outpost-chat), a self-hosted Discord alternative. The upstream project site is [outpost-chat.com](https://outpost-chat.com).
 
-A self-hosted Discord alternative. Each Outpost deployment is one
+A self-hosted Discord alternative. Each GroodChat deployment is one
 self-hosted community — accounts, text/voice channels, roles, invites, file
 uploads — reachable from a web browser or the native desktop app.
 
@@ -82,23 +82,42 @@ updating, backups, and port requirements.
 ## Desktop client
 
 Download the latest installer for Windows/macOS/Linux from the
-[Releases page](https://github.com/blindrun/outpost-chat/releases). The
+[Releases page](https://github.com/mtzeclipse01-lgtm/GroodChat/releases). The
 desktop app is just the web client packaged with Electron — on first
 launch, use "Add a Server" to connect to your own (or anyone else's)
-Outpost instance by address.
+GroodChat-compatible instance by address.
 
 Installers are unsigned (no paid code-signing certificate for a personal
 project), so Windows SmartScreen / macOS Gatekeeper will warn on first
 run — that's expected, not a sign of a bad build.
 
+### Build the Windows installer with GitHub Actions
+
+Choose the next version and add a matching `vX.Y.Z` section to
+`CHANGELOG.md`. Update the Electron package and lockfile together, then push
+the matching version tag:
+
+```bash
+(cd electron && npm version 0.6.5 --no-git-tag-version)
+git tag v0.6.5
+git push origin v0.6.5
+```
+
+Replace `0.6.5` with the chosen version in all three places.
+
+The `Desktop client` workflow builds the Windows NSIS installer and attaches
+the `.exe` to the GitHub release. GitHub Actions can be used at no charge
+within the repository's included usage allowance. Windows builds are unsigned,
+so SmartScreen may show a warning.
+
 **On macOS specifically**, an unsigned app often shows a scarier message
-than a simple warning: *"Outpost is damaged and can't be opened. You
+than a simple warning: *"GroodChat is damaged and can't be opened. You
 should move it to the Trash."* This is Gatekeeper's quarantine check
 misreporting an unsigned app as corrupted — the download isn't actually
 damaged. Fix it from Terminal:
 
 ```bash
-xattr -cr /Applications/Outpost.app
+xattr -cr /Applications/GroodChat.app
 ```
 
 (adjust the path if you didn't install to `/Applications`), then open it
@@ -114,7 +133,7 @@ installer again from the Releases page.
 
 ### Linux, via Flatpak
 
-Outpost has its own signed Flatpak repository. Adding the remote also puts
+The upstream Outpost app has its own signed Flatpak repository. Adding the remote also puts
 it in Bazaar, GNOME Software and KDE Discover:
 
 ```bash
@@ -123,12 +142,12 @@ flatpak install --user outpost io.github.blindrun.OutpostChat
 ```
 
 Updates then arrive through Flatpak like any other app, and the build runs
-sandboxed. Outpost is not on Flathub and will not be, because their policy
+sandboxed. The upstream Outpost app is not on Flathub and will not be, because their policy
 excludes applications written with AI assistance.
 
 ## Web client, without installing anything
 
-[app.outpost-chat.com](https://app.outpost-chat.com) runs the same client
+[app.outpost-chat.com](https://app.outpost-chat.com) runs the upstream client
 in a browser. You type your own instance address and it talks to that
 instance directly, so nothing you send passes through us. Encrypted direct
 messages are encrypted by the client, which means serving you that client
@@ -178,7 +197,7 @@ See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Who builds this
 
-Outpost is built by [Son of a Tech](https://sonofatech.com).
+The upstream Outpost project is built by [Son of a Tech](https://sonofatech.com).
 
 The same homelab runs the reverse proxy, WireGuard tunnels, Proxmox backups and
 monitoring that this project was developed against. Every problem worth writing

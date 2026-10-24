@@ -1,11 +1,11 @@
 {
-  "name": "outpost-desktop",
-  "productName": "Outpost",
-  "desktopName": "outpost.desktop",
-  "version": "0.6.4",
+  "name": "groodchat-desktop",
+  "desktopName": "groodchat.desktop",
+  "version": "0.6.5",
   "private": true,
+  "description": "Open-source chat client customized from Outpost.",
   "main": "main.js",
-  "homepage": "https://github.com/blindrun/outpost-chat",
+  "homepage": "https://github.com/mtzeclipse01-lgtm/GroodChat",
   "author": {
     "name": "blindrun",
     "email": "blindrungaming@gmail.com"
@@ -20,8 +20,8 @@
     "electron-builder": "^26.15.3"
   },
   "build": {
-    "appId": "com.outpost-chat.desktop",
-    "productName": "Outpost",
+    "appId": "com.groodchat.desktop",
+    "productName": "GroodChat",
     "directories": {
       "output": "release"
     },
@@ -32,7 +32,7 @@
     ],
     "protocols": [
       {
-        "name": "Outpost",
+        "name": "GroodChat",
         "schemes": [
           "outpost"
         ]
@@ -40,8 +40,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "blindrun",
-      "repo": "outpost-chat"
+      "owner": "mtzeclipse01-lgtm",
+      "repo": "GroodChat"
     },
     "mac": {
       "icon": "build/icon.png",
@@ -56,8 +56,8 @@
       "entitlementsInherit": "build/entitlements.mac.plist",
       "notarize": true,
       "extendInfo": {
-        "NSMicrophoneUsageDescription": "Outpost needs microphone access to let you talk in voice channels.",
-        "NSCameraUsageDescription": "Outpost needs camera access for video in voice channels."
+        "NSMicrophoneUsageDescription": "GroodChat needs microphone access to let you talk in voice channels.",
+        "NSCameraUsageDescription": "GroodChat needs camera access for video in voice channels."
       }
     },
     "win": {
@@ -69,7 +69,7 @@
     "linux": {
       "icon": "build/icon.png",
       "category": "Network",
-      "synopsis": "Self-hosted Discord alternative",
+      "synopsis": "Self-hosted chat client",
       "syncDesktopName": true,
       "target": [
         "AppImage",
